@@ -16,7 +16,7 @@ for line in current_file :  # read file line by line
     refference_pos = line.find('from')  # just refference index to find position of 'from'
     start_pos = line.find(' ',refference_pos) # starting position index
     end_pos = line.find(' ',start_pos+2)  # take the index of ' ' after the index of start_pos
-    username = line[start_pos:end_pos]
+    username = line[start_pos+1:end_pos]
     current_dictionary[username] = current_dictionary.get(username,0) + 1 # creating histogram of key-value pair of current_dictionary
 
 #making a list of tupple and interchanging the value of key and value.
